@@ -48,3 +48,6 @@ if ingredients_list:
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 st.text(fruityvice_response.json())
+
+# Let's Put the JSON into a Dataframe.People often use df as shorthand for "dataframe." We'll call our dataframe fv_df, because it's our Fruityvice Dataframe.
+fv_df=st.dataframe(data=fruityvice_response.json(),use_container_width=True)
