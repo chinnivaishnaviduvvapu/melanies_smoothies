@@ -47,4 +47,4 @@ if ingredients_list:
 # Let's Call the Fruityvice API from Our SniS App!We need to bring in a Python package library called requests.  The requests library allows us to build and sent REST API calls. 
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-st.text(fruityvice_response)
+st.text(fruityvice_response.json())
