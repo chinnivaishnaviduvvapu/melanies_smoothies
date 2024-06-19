@@ -17,7 +17,7 @@ st.write("The nam on your Smoothie will be:",name_on_order )
 
 
 #Display the Fruit Options List in Your Streamlit in Snowflake (SiS) App. 
-session = cnx.session()
+session = get_active_session()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 #st.dataframe(data=my_dataframe, use_container_width=True)
 
